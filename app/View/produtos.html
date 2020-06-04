@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Produtos</title>
+    <link rel="stylesheet" href="http://localhost/SistemaRkav/assets/css/styles.css">
+</head>
+<body>
+    
+    <header>
+            <div class="container">
+
+                <img id="logo" src="http://localhost/SistemaRkav/assets/img/logo_size.jpg">
+
+                <div id="menu">
+                    
+                    <a href="http://localhost/SistemaRkav/?pagina=home">Home</a>
+                    <a href="http://localhost/SistemaRkav/?pagina=pesquisar&metodo=search">Pesquisar Produtos</a>
+                    <a href="http://localhost/SistemaRkav/?pagina=cadastrar&metodo=create">Cadastrar</a>
+                    <a href="http://localhost/SistemaRkav/?pagina=produtos">Produtos</a>
+                    <a href="http://localhost/SistemaRkav/?pagina=clientes">Clientes</a>
+                    <a href="http://localhost/SistemaRkav/?pagina=home&metodo=logout">Sair</a>
+
+                </div>
+
+            </div>
+    </header>
+
+    <div id="principal">
+        
+        <h1>Produtos</h1>
+
+        <div id="table">
+
+            <center><table border="2" >
+                <tr id="table">
+                    <th id="campo">ID</th>
+                    <th id="campo">DESCRICAO</th>
+                    <th id="campo">PREÇO R$</th>
+                    <th id="campo">ESTOQUE</th>
+                    <th id="campo">ALTERAR</th>
+                    <th id="campo">DELETAR</th>
+                </tr>
+    
+                    {% for produtos in produtos %}
+                    <tr>
+                        <th>{{produtos.id}}</th>
+                        <th>{{produtos.descricao}}</th>
+                        <th>{{produtos.preco}} R$</th>  
+                        <th>{{produtos.estoque}}</th>  
+                        <th><a href="http://localhost/SistemaRkav/?pagina=atualizar&metodo=change&id={{produtos.id}}">ALTERAR</a></th>
+                        <th><a href="http://localhost/SistemaRkav/?pagina=deletar&metodo=delete&id={{produtos.id}}">DELETAR</a></th>
+                    </tr>
+                    {% endfor %}
+            
+            </table></center>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="row">
+            <div class="col-md-12">
+                <center>© 2020 rkav | Todos os direitos reservados. Construido por <a href="#">RKAV</a>.</center>
+            </div>
+        </div>
+
+    </footer>
+    
+</body>
+</html>

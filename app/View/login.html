@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="http://localhost/SistemaRkav/stylelogin.css">
+</head>
+<body>
+    <div class="box_login"> 
+        <div class="capa">  
+            <div id="logo"></div>
+            <h1>
+                <center>Administrador </center> 
+            </h1>
+        </div>
+
+        <h1>Faça seu login</h1>
+
+        <form action="http://localhost/SistemaRkav/?pagina=login&metodo=check" method="POST">
+
+            <input type="email" name="email" placeholder= "E-MAIL">
+
+            <input type="password" name="password" placeholder="SENHA" >
+
+            <button class="btn-login"> <strong>ENTRAR</strong> </button>
+
+            {% if error != '' %}
+                <center><span>Tentativa Inválida</span></center>
+            {% endif %}
+
+        </form>
+
+    </div>
+</body>
+</html>

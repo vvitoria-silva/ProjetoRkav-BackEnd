@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Atualizar</title>
+    <link rel="stylesheet" href="http://localhost/SistemaRkav/assets/css/styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+
+                <img id="logo" src="http://localhost/SistemaRkav/assets/img/logo_size.jpg">
+
+                <div id="menu">
+                    
+                    <a href="http://localhost/SistemaRkav/?pagina=home">Home</a>
+                    <a href="http://localhost/SistemaRkav/?pagina=pesquisar&metodo=search">Pesquisar Produtos</a>
+                    <a href="http://localhost/SistemaRkav/?pagina=cadastrar&metodo=create">Cadastrar</a>
+                    <a href="http://localhost/SistemaRkav/?pagina=produtos">Produtos</a>
+                    <a href="http://localhost/SistemaRkav/?pagina=clientes">Clientes</a>
+                    <a href="http://localhost/SistemaRkav/?pagina=home&metodo=logout">Sair</a>
+
+                </div>
+
+            </div>
+
+            
+        </div>
+    </header>
+
+    <div id="principal">
+        <h1>Atualizar Produtos</h1>
+        
+        <form action="http://localhost/SistemaRkav/?pagina=atualizar&metodo=update" method="POST">
+
+            <center>
+            
+            <label >Descrição: </label>
+            <input type="text" name="descricao" value="{{descricao}}"><br><br>
+    
+            <label>Preço: </label>
+            <input type="number" name="preco" value="{{preco}}"><br><br>
+
+            <label >Estoque:</label>
+            <input type="number" name="estoque" value="{{estoque}}"><br><br>
+    
+            <input type="hidden" name="id" value="{{id}}"> <br>
+            
+            <input id="btn" type="submit" value="Alterar"></center>
+
+        </form>
+
+
+    </div>
+
+    <footer>
+        <div class="row">
+            <div class="col-md-12">
+                <center>© 2020 rkav | Todos os direitos reservados. Construido por <a href="#">RKAV</a>.</center>
+            </div>
+        </div>
+
+    </footer>
+    
+</body>
+</html>

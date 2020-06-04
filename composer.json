@@ -1,0 +1,10 @@
+
+
+{
+    "name": "vendor/twig twig",
+    "description": "Projeto",
+    "require": {
+        "php": "^7.2",
+        "twig/twig": "^3.0"
+    }
+}

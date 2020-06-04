@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Clientes</title>
+
+    <link rel="stylesheet" href="http://localhost/SistemaRkav/assets/css/styles.css">
+</head>
+<body>
+
+    <header>
+            <div class="container">
+
+                <img id="logo" src="http://localhost/SistemaRkav/assets/img/logo_size.jpg">
+
+                <div id="menu">
+                    
+                    <a href="http://localhost/SistemaRkav/?pagina=home">Home</a>
+                    <a href="http://localhost/SistemaRkav/?pagina=pesquisar&metodo=search">Pesquisar Produtos</a>
+                    <a href="http://localhost/SistemaRkav/?pagina=cadastrar&metodo=create">Cadastrar</a>
+                    <a href="http://localhost/SistemaRkav/?pagina=produtos">Produtos</a>
+                    <a href="http://localhost/SistemaRkav/?pagina=clientes">Clientes</a>
+                    <a href="http://localhost/SistemaRkav/?pagina=home&metodo=logout">Sair</a>
+
+                </div>
+
+            </div>
+            
+    </header>
+
+    <div id="principal">
+        
+        <h1>Clientes Cadastrados</h1>
+
+        <div id="table">
+
+            <center><table border="2" >
+                <tr>
+                    <th id="campo">ID</th>
+                    <th id="campo">NOME</th>
+                    <th id="campo">CPF</th>
+                    <th id="campo">CEP</th>
+                    <th id="campo">ENDEREÇO</th>
+                    <th id="campo">ESTADO</th>
+                    <th id="campo">DATA NASCIMENTO</th>
+                    <th id="campo">E-MAIL</th>
+
+                </tr>
+    
+                    {% for clientes in clientes %}
+                    <tr>
+                        <th>{{clientes.id}}</th>
+                        <th>{{clientes.nome}}</th>
+                        <th>{{clientes.cpf}}</th>  
+                        <th>{{clientes.cep}}</th>  
+                        <th>{{clientes.endereco}}</th> 
+                        <th>{{clientes.estado}}</th>
+                        <th>{{clientes.dataNasc}}</th> 
+                        <th>{{clientes.email}}</th>   
+                    </tr>
+                    {% endfor %}
+            
+            </table></center>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="row">
+            <div class="col-md-12">
+                <center>© 2020 rkav | Todos os direitos reservados. Construido por <a href="#">RKAV</a>.</center>
+            </div>
+        </div>
+
+    </footer>
+    
+</body>
+</html>

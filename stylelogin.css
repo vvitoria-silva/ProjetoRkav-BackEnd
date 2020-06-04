@@ -1,0 +1,79 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #B0E0E6;
+
+}
+
+.box_login{
+    width:500px;
+    height: 500px;
+    background: #20B2AA;
+    border: 0;
+    border-radius: 10px;
+}
+
+.box_login .capa {
+    height: 240px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat ;
+
+}
+
+.capa h1 {
+    color: black;
+    padding: 50px;
+
+}
+
+#logo {
+
+    background-image: url(http://localhost/SistemaRkav/assents/img/logo_size_invert.jpg);
+    height: 98px;
+}
+
+
+h1{
+    color: black;
+    font-size: 24px;
+    text-align: left;
+    margin: 15px 0px 20px 15px; 
+    
+
+}
+
+form input {
+    width: calc(100% - 40px);
+    padding: 10px 15px ;
+    margin: 0px 20px;
+    border-radius: 10px;
+    border: 2;
+    border-color: black;
+    margin-bottom: 20px;
+    text-align: center;
+    color: black ;
+    background-color: #20B2AA;
+
+}
+
+form .btn-login {
+    width: calc(100% - 40px);
+    margin: 0px 20px;
+    background: #0000FF;
+    color: black;
+    border-radius: 10px;
+    border: 0;
+    margin-bottom: 20px;
+    padding: 10px 15px ;
+}
